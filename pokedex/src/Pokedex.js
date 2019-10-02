@@ -1,15 +1,16 @@
 import React from 'react';
 import Pokecard from './Pokecard';
+import './Pokedex.css';
 
 const Pokedex = (props) => {    
     return (
-        <div>
+        <ul className="Pokedex">
             {
                 props.pokemonArr.map((pokemon) => {
                     return <Pokecard key={pokemon.id} id={pokemon.id} name={pokemon.name} type={pokemon.type} base_experience={pokemon.base_experience} />
                 })
             }
-        </div>
+        </ul>
     );
 }
 
