@@ -6,8 +6,7 @@ const Pokedex = (props) => {
         <div>
             {
                 props.pokemonArr.map((pokemon) => {
-                    return <Pokecard id={pokemon.id} />
-                    console.log(pokemon);
+                    return <Pokecard key={pokemon.id} id={pokemon.id} name={pokemon.name} type={pokemon.type} base_experience={pokemon.base_experience} />
                 })
             }
         </div>
